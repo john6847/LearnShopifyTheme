@@ -1,0 +1,16 @@
+{% if search.performed%}
+<h1> Here's your results</h1>
+{% for result in search.results %}
+  {% if result.object_type == "page" %}
+    <a href="{{ result.url }}">{{result.title}} </a>
+  {%else %}
+    <a href="{{ result.url }}">{{result.title}} </a>
+  {%endif%}
+
+{% endfor %}
+
+{%else%}
+
+<h1> Search for something </h1>
+
+{% endif%}

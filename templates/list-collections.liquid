@@ -1,0 +1,10 @@
+<h1>Collections</h1>
+
+{%for collection in collections%}
+    <div>
+
+        <a href="{{ collection.url }}"><h2>{{collection.title}}</h2></a>
+        <p>Products: {{collection.all_products_count}}</p>
+
+    </div>
+{%endfor%}
